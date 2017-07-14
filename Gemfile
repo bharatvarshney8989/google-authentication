@@ -33,8 +33,8 @@ group :doc do
 end
 
 gem 'omniauth-github'
+gem 'omniauth-google-oauth2', github: 'zquestz/omniauth-google-oauth2', branch: 'v0.2.10'
 
-gem 'byebug'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

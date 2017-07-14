@@ -3,7 +3,10 @@ OmniApp::Application.routes.draw do
   get  'home/profile'
   #get 'sessions/index'
   get 'auth/:provider/callback' , to: "sessions#create"
+  get 'auth/failure',to: redirect('/')
   delete 'sign_out', to: "sessions#destroy", as: 'sign_out'
+  resources :sessions, only:[:create,:destroy]
+  resource   :home, only: [:show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
