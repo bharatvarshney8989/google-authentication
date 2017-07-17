@@ -1,0 +1,786 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'ngrok' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'ngrok', null ]
+5 verbose cache add name=undefined spec="ngrok" args=["ngrok",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'ngrok',
+6 verbose parsed url   path: 'ngrok',
+6 verbose parsed url   href: 'ngrok' }
+7 silly lockFile 893a9e06-ngrok ngrok
+8 verbose lock ngrok /home/silver/.npm/893a9e06-ngrok.lock
+9 silly lockFile 893a9e06-ngrok ngrok
+10 silly lockFile 893a9e06-ngrok ngrok
+11 verbose addNamed [ 'ngrok', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile ccf7dd4b-ngrok ngrok@
+14 verbose lock ngrok@ /home/silver/.npm/ccf7dd4b-ngrok.lock
+15 silly addNameRange { name: 'ngrok', range: '*', hasData: false }
+16 verbose url raw ngrok
+17 verbose url resolving [ 'https://registry.npmjs.org/', './ngrok' ]
+18 verbose url resolved https://registry.npmjs.org/ngrok
+19 info trying registry request attempt 1 at 17:19:52
+20 verbose etag "5962a18e-10397"
+21 http GET https://registry.npmjs.org/ngrok
+22 http 304 https://registry.npmjs.org/ngrok
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Fri, 14 Jul 2017 11:49:52 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=300',
+23 silly registry.get     etag: '"5962a18e-10397"',
+23 silly registry.get     age: '17',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-sin18035-SIN',
+23 silly registry.get     'x-cache': 'HIT',
+23 silly registry.get     'x-cache-hits': '1',
+23 silly registry.get     'x-timer': 'S1500032993.962757,VS0,VE1',
+23 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+24 verbose etag ngrok from cache
+25 silly addNameRange number 2 { name: 'ngrok', range: '*', hasData: true }
+26 silly addNameRange versions [ 'ngrok',
+26 silly addNameRange   [ '0.1.0',
+26 silly addNameRange     '0.1.1',
+26 silly addNameRange     '0.1.2',
+26 silly addNameRange     '0.1.3',
+26 silly addNameRange     '0.1.4',
+26 silly addNameRange     '0.1.5',
+26 silly addNameRange     '0.1.6',
+26 silly addNameRange     '0.1.7',
+26 silly addNameRange     '0.1.8',
+26 silly addNameRange     '0.1.9',
+26 silly addNameRange     '0.1.91',
+26 silly addNameRange     '0.1.92',
+26 silly addNameRange     '0.1.93',
+26 silly addNameRange     '0.1.94',
+26 silly addNameRange     '0.1.95',
+26 silly addNameRange     '0.1.96',
+26 silly addNameRange     '0.1.97',
+26 silly addNameRange     '0.1.98',
+26 silly addNameRange     '0.1.99',
+26 silly addNameRange     '0.2.0',
+26 silly addNameRange     '0.2.1',
+26 silly addNameRange     '0.2.2',
+26 silly addNameRange     '0.2.3',
+26 silly addNameRange     '2.1.1',
+26 silly addNameRange     '2.1.2',
+26 silly addNameRange     '2.1.3',
+26 silly addNameRange     '2.1.4',
+26 silly addNameRange     '2.1.5',
+26 silly addNameRange     '2.1.6',
+26 silly addNameRange     '2.1.7',
+26 silly addNameRange     '2.1.8',
+26 silly addNameRange     '2.1.9',
+26 silly addNameRange     '2.2.0',
+26 silly addNameRange     '2.2.1',
+26 silly addNameRange     '2.2.2',
+26 silly addNameRange     '2.2.3',
+26 silly addNameRange     '2.2.4',
+26 silly addNameRange     '2.2.5',
+26 silly addNameRange     '2.2.6',
+26 silly addNameRange     '2.2.7',
+26 silly addNameRange     '2.2.8',
+26 silly addNameRange     '2.2.9',
+26 silly addNameRange     '2.2.10',
+26 silly addNameRange     '2.2.11',
+26 silly addNameRange     '2.2.12',
+26 silly addNameRange     '2.2.13',
+26 silly addNameRange     '2.2.14' ] ]
+27 verbose addNamed [ 'ngrok', '2.2.14' ]
+28 verbose addNamed [ '2.2.14', '2.2.14' ]
+29 silly lockFile 921672b1-ngrok-2-2-14 ngrok@2.2.14
+30 verbose lock ngrok@2.2.14 /home/silver/.npm/921672b1-ngrok-2-2-14.lock
+31 silly lockFile 921672b1-ngrok-2-2-14 ngrok@2.2.14
+32 silly lockFile 921672b1-ngrok-2-2-14 ngrok@2.2.14
+33 silly lockFile ccf7dd4b-ngrok ngrok@
+34 silly lockFile ccf7dd4b-ngrok ngrok@
+35 silly resolved [ { name: 'ngrok',
+35 silly resolved     version: '2.2.14',
+35 silly resolved     description: 'node wrapper for ngrok',
+35 silly resolved     main: 'index.js',
+35 silly resolved     types: 'ngrok.d.ts',
+35 silly resolved     scripts:
+35 silly resolved      { test: 'node ./node_modules/mocha/bin/_mocha',
+35 silly resolved        postinstall: 'node ./postinstall.js',
+35 silly resolved        postupdate: 'node ./postinstall.js' },
+35 silly resolved     files: [ 'index.js', 'postinstall.js', 'bin/ngrok' ],
+35 silly resolved     repository: { type: 'git', url: 'git://github.com/bubenshchykov/ngrok.git' },
+35 silly resolved     keywords: [ 'ngrok', 'localhost', 'tunneling', 'localtunnel', 'webhook' ],
+35 silly resolved     author: { name: 'bubenshchykov' },
+35 silly resolved     license: 'BSD-2-Clause',
+35 silly resolved     bugs: { url: 'https://github.com/bubenshchykov/ngrok/issues' },
+35 silly resolved     devDependencies: { chai: '~3.5.0', homedir: '^0.6.0', mocha: '~3.4.2' },
+35 silly resolved     dependencies:
+35 silly resolved      { '@types/node': '^7.0.31',
+35 silly resolved        async: '^2.3.0',
+35 silly resolved        'decompress-zip': '^0.3.0',
+35 silly resolved        lock: '^0.1.2',
+35 silly resolved        request: '^2.55.0',
+35 silly resolved        uuid: '^3.0.0' },
+35 silly resolved     bin: { ngrok: './bin/ngrok' },
+35 silly resolved     readme: 'ngrok [![Build Status](https://travis-ci.org/bubenshchykov/ngrok.png?branch=master)](https://travis-ci.org/bubenshchykov/ngrok) ![TypeScript compatible](https://img.shields.io/badge/typescript-compatible-brightgreen.svg)\n=====\n\n![alt ngrok.com](https://ngrok.com/static/img/overview.png)\n\nNgrok exposes your localhost to the web. https://ngrok.com/\n\nusage\n===\n\n[![NPM](https://nodei.co/npm/ngrok.png?global=true&&downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ngrok/)\n\n```\nvar ngrok = require(\'ngrok\');\nngrok.connect(function (err, url) {});\n\nor\n\nnpm install ngrok -g\nngrok http 8080\n```\n\n## authtoken\nYou can create basic http-https-tcp tunnel without authtoken. For custom subdomains and more you should  obtain authtoken by signing up at [ngrok.com](https://ngrok.com). Once you set it, it\'s stored in ngrok config and used for all tunnels. Few ways:\n\n```\nngrok.authtoken(token, function(err, token) {});\nngrok.connect({authtoken: token, ...}, function (err, url) {});\nngrok authtoken <token>\n```\n\n## connect\n```javascript\nvar ngrok = require(\'ngrok\');\n\nngrok.connect(function (err, url) {}); // https://757c1652.ngrok.io -> http://localhost:80\nngrok.connect(9090, function (err, url) {}); // https://757c1652.ngrok.io -> http://localhost:9090\nngrok.connect({proto: \'tcp\', addr: 22}, function (err, url) {}); // tcp://0.tcp.ngrok.io:48590\nngrok.connect(opts, function(err, url) {});\n```\n\n## options\n```javascript\nngrok.connect({\n\tproto: \'http\', // http|tcp|tls\n\taddr: 8080, // port or network address\n\tauth: \'user:pwd\', // http basic authentication for tunnel\n\tsubdomain: \'alex\', // reserved tunnel name https://alex.ngrok.io\n\tauthtoken: \'12345\', // your authtoken from ngrok.com\n\tregion: \'us\' // one of ngrok regions (us, eu, au, ap), defaults to us,\n\tconfigPath: \'~/git/project/ngrok.yml\' // custom path for ngrok config file\n}, function (err, url) {});\n```\n\nOther options: `name, inspect, host_header, bind_tls, hostname, crt, key, client_cas, remote_addr` - read [here](https://ngrok.com/docs)\n\nNote on regions: region used in first tunnel will be used for all next tunnels too.\n\n## disconnect\nThe ngrok and all tunnels will be killed when node process is done. To stop the tunnels use\n```javascript\nngrok.disconnect(url); // stops one\nngrok.disconnect(); // stops all\nngrok.kill(); // kills ngrok process\n```\n\nNote on http tunnels: by default bind_tls is true, so whenever you use http proto two tunnels are created - http and https. If you disconnect https tunnel, http tunnel remains open. You might want to close them both by passing http-version url, or simply by disconnecting all in one go ```ngrok.disconnect()```.\n\n## emitter\nAlso you can use ngrok as an event emitter, it fires "connect", "disconnect" and "error" events\n```javascript\nngrok.once(\'connect\', function (url) {};\nngrok.connect(port);\n```\n\n## configs\nYou can use ngrok\'s [configurations files](https://ngrok.com/docs#config), and just pass `name` option when making a tunnel. Configuration files allow to store tunnel options. Ngrok looks for them here:\n```\nOS X\t/Users/example/.ngrok2/ngrok.yml\nLinux\t/home/example/.ngrok2/ngrok.yml\nWindows\tC:\\Users\\example\\.ngrok2\\ngrok.yml\n```\nYou can specify a custom `configPath` when making a tunnel.\n\n## inspector\nWhen tunnel is established you can use the ngrok interface http://127.0.0.1:4040 to inspect the webhooks done via ngrok.\n\n## how it works\nnpm install downloads ngrok binaries for you platform and puts them into bin folder. You can host binaries yourself and set NGROK_CDN_URL env var before installing ngrok. Or you can force specific arch by setting NGROK_ARCH, eg NGROK_ARCH=freebsdia32\n\nFirst time you create tunnel ngrok process is spawned and runs until you disconnect or when parent process killed. All further tunnels are created or stopped by using internal ngrok api which usually runs on http://127.0.0.1:4040\n\n## contributors\nPlease run ```git update-index --assume-unchanged bin/ngrok``` to not override [ngrok stub](https://github.com/bubenshchykov/ngrok/blob/master/bin/ngrok) in your pr. Unfortunately it can\'t be gitignored.\n',
+35 silly resolved     readmeFilename: 'README.md',
+35 silly resolved     _id: 'ngrok@2.2.14',
+35 silly resolved     _from: 'ngrok@' } ]
+36 info install ngrok@2.2.14 into /home/silver/practice/omni_app
+37 info installOne ngrok@2.2.14
+38 info /home/silver/practice/omni_app/node_modules/ngrok unbuild
+39 info preuninstall ngrok@2.2.14
+40 info uninstall ngrok@2.2.14
+41 verbose true,/home/silver/practice/omni_app/node_modules,/home/silver/practice/omni_app/node_modules unbuild ngrok@2.2.14
+42 verbose /home/silver/practice/omni_app/node_modules/.bin,[object Object] binRoot
+43 info postuninstall ngrok@2.2.14
+44 verbose tar unpack /home/silver/.npm/ngrok/2.2.14/package.tgz
+45 silly lockFile d0e372f7-tice-omni-app-node-modules-ngrok tar:///home/silver/practice/omni_app/node_modules/ngrok
+46 verbose lock tar:///home/silver/practice/omni_app/node_modules/ngrok /home/silver/.npm/d0e372f7-tice-omni-app-node-modules-ngrok.lock
+47 silly lockFile 2467e809-ver-npm-ngrok-2-2-14-package-tgz tar:///home/silver/.npm/ngrok/2.2.14/package.tgz
+48 verbose lock tar:///home/silver/.npm/ngrok/2.2.14/package.tgz /home/silver/.npm/2467e809-ver-npm-ngrok-2-2-14-package-tgz.lock
+49 silly gunzTarPerm modes [ '755', '644' ]
+50 silly gunzTarPerm extractEntry package.json
+51 silly gunzTarPerm extractEntry README.md
+52 silly gunzTarPerm extractEntry index.js
+53 silly gunzTarPerm extractEntry postinstall.js
+54 silly gunzTarPerm extractEntry bin/ngrok
+55 silly lockFile d0e372f7-tice-omni-app-node-modules-ngrok tar:///home/silver/practice/omni_app/node_modules/ngrok
+56 silly lockFile d0e372f7-tice-omni-app-node-modules-ngrok tar:///home/silver/practice/omni_app/node_modules/ngrok
+57 silly lockFile 2467e809-ver-npm-ngrok-2-2-14-package-tgz tar:///home/silver/.npm/ngrok/2.2.14/package.tgz
+58 silly lockFile 2467e809-ver-npm-ngrok-2-2-14-package-tgz tar:///home/silver/.npm/ngrok/2.2.14/package.tgz
+59 info preinstall ngrok@2.2.14
+60 verbose readDependencies using package.json deps
+61 verbose readDependencies using package.json deps
+62 verbose cache add [ '@types/node@^7.0.31', null ]
+63 verbose cache add name=undefined spec="@types/node@^7.0.31" args=["@types/node@^7.0.31",null]
+64 verbose parsed url { protocol: null,
+64 verbose parsed url   slashes: null,
+64 verbose parsed url   auth: null,
+64 verbose parsed url   host: null,
+64 verbose parsed url   port: null,
+64 verbose parsed url   hostname: null,
+64 verbose parsed url   hash: null,
+64 verbose parsed url   search: null,
+64 verbose parsed url   query: null,
+64 verbose parsed url   pathname: '@types/node@^7.0.31',
+64 verbose parsed url   path: '@types/node@^7.0.31',
+64 verbose parsed url   href: '@types/node@^7.0.31' }
+65 verbose cache add name="" spec="types/node@^7.0.31" args=["","types/node@^7.0.31"]
+66 verbose parsed url { protocol: null,
+66 verbose parsed url   slashes: null,
+66 verbose parsed url   auth: null,
+66 verbose parsed url   host: null,
+66 verbose parsed url   port: null,
+66 verbose parsed url   hostname: null,
+66 verbose parsed url   hash: null,
+66 verbose parsed url   search: null,
+66 verbose parsed url   query: null,
+66 verbose parsed url   pathname: 'types/node@^7.0.31',
+66 verbose parsed url   path: 'types/node@^7.0.31',
+66 verbose parsed url   href: 'types/node@^7.0.31' }
+67 verbose cache add name="types/node" spec="^7.0.31" args=["types/node","^7.0.31"]
+68 verbose parsed url { protocol: null,
+68 verbose parsed url   slashes: null,
+68 verbose parsed url   auth: null,
+68 verbose parsed url   host: null,
+68 verbose parsed url   port: null,
+68 verbose parsed url   hostname: null,
+68 verbose parsed url   hash: null,
+68 verbose parsed url   search: null,
+68 verbose parsed url   query: null,
+68 verbose parsed url   pathname: '^7.0.31',
+68 verbose parsed url   path: '^7.0.31',
+68 verbose parsed url   href: '^7.0.31' }
+69 verbose addNamed [ 'types/node', '^7.0.31' ]
+70 verbose addNamed [ null, '>=7.0.31-0 <8.0.0-0' ]
+71 silly lockFile 91ed88ee-types-node-7-0-31 types/node@^7.0.31
+72 verbose lock types/node@^7.0.31 /home/silver/.npm/91ed88ee-types-node-7-0-31.lock
+73 verbose cache add [ 'async@^2.3.0', null ]
+74 verbose cache add name=undefined spec="async@^2.3.0" args=["async@^2.3.0",null]
+75 verbose parsed url { protocol: null,
+75 verbose parsed url   slashes: null,
+75 verbose parsed url   auth: null,
+75 verbose parsed url   host: null,
+75 verbose parsed url   port: null,
+75 verbose parsed url   hostname: null,
+75 verbose parsed url   hash: null,
+75 verbose parsed url   search: null,
+75 verbose parsed url   query: null,
+75 verbose parsed url   pathname: 'async@^2.3.0',
+75 verbose parsed url   path: 'async@^2.3.0',
+75 verbose parsed url   href: 'async@^2.3.0' }
+76 verbose cache add name="async" spec="^2.3.0" args=["async","^2.3.0"]
+77 verbose parsed url { protocol: null,
+77 verbose parsed url   slashes: null,
+77 verbose parsed url   auth: null,
+77 verbose parsed url   host: null,
+77 verbose parsed url   port: null,
+77 verbose parsed url   hostname: null,
+77 verbose parsed url   hash: null,
+77 verbose parsed url   search: null,
+77 verbose parsed url   query: null,
+77 verbose parsed url   pathname: '^2.3.0',
+77 verbose parsed url   path: '^2.3.0',
+77 verbose parsed url   href: '^2.3.0' }
+78 verbose addNamed [ 'async', '^2.3.0' ]
+79 verbose addNamed [ null, '>=2.3.0-0 <3.0.0-0' ]
+80 silly lockFile fa9ef8fe-async-2-3-0 async@^2.3.0
+81 verbose lock async@^2.3.0 /home/silver/.npm/fa9ef8fe-async-2-3-0.lock
+82 verbose cache add [ 'lock@^0.1.2', null ]
+83 verbose cache add name=undefined spec="lock@^0.1.2" args=["lock@^0.1.2",null]
+84 verbose parsed url { protocol: null,
+84 verbose parsed url   slashes: null,
+84 verbose parsed url   auth: null,
+84 verbose parsed url   host: null,
+84 verbose parsed url   port: null,
+84 verbose parsed url   hostname: null,
+84 verbose parsed url   hash: null,
+84 verbose parsed url   search: null,
+84 verbose parsed url   query: null,
+84 verbose parsed url   pathname: 'lock@^0.1.2',
+84 verbose parsed url   path: 'lock@^0.1.2',
+84 verbose parsed url   href: 'lock@^0.1.2' }
+85 verbose cache add name="lock" spec="^0.1.2" args=["lock","^0.1.2"]
+86 verbose parsed url { protocol: null,
+86 verbose parsed url   slashes: null,
+86 verbose parsed url   auth: null,
+86 verbose parsed url   host: null,
+86 verbose parsed url   port: null,
+86 verbose parsed url   hostname: null,
+86 verbose parsed url   hash: null,
+86 verbose parsed url   search: null,
+86 verbose parsed url   query: null,
+86 verbose parsed url   pathname: '^0.1.2',
+86 verbose parsed url   path: '^0.1.2',
+86 verbose parsed url   href: '^0.1.2' }
+87 verbose addNamed [ 'lock', '^0.1.2' ]
+88 verbose addNamed [ null, '>=0.1.2-0 <0.2.0-0' ]
+89 silly lockFile 3a5724e4-lock-0-1-2 lock@^0.1.2
+90 verbose lock lock@^0.1.2 /home/silver/.npm/3a5724e4-lock-0-1-2.lock
+91 verbose cache add [ 'decompress-zip@^0.3.0', null ]
+92 verbose cache add name=undefined spec="decompress-zip@^0.3.0" args=["decompress-zip@^0.3.0",null]
+93 verbose parsed url { protocol: null,
+93 verbose parsed url   slashes: null,
+93 verbose parsed url   auth: null,
+93 verbose parsed url   host: null,
+93 verbose parsed url   port: null,
+93 verbose parsed url   hostname: null,
+93 verbose parsed url   hash: null,
+93 verbose parsed url   search: null,
+93 verbose parsed url   query: null,
+93 verbose parsed url   pathname: 'decompress-zip@^0.3.0',
+93 verbose parsed url   path: 'decompress-zip@^0.3.0',
+93 verbose parsed url   href: 'decompress-zip@^0.3.0' }
+94 verbose cache add name="decompress-zip" spec="^0.3.0" args=["decompress-zip","^0.3.0"]
+95 verbose parsed url { protocol: null,
+95 verbose parsed url   slashes: null,
+95 verbose parsed url   auth: null,
+95 verbose parsed url   host: null,
+95 verbose parsed url   port: null,
+95 verbose parsed url   hostname: null,
+95 verbose parsed url   hash: null,
+95 verbose parsed url   search: null,
+95 verbose parsed url   query: null,
+95 verbose parsed url   pathname: '^0.3.0',
+95 verbose parsed url   path: '^0.3.0',
+95 verbose parsed url   href: '^0.3.0' }
+96 verbose addNamed [ 'decompress-zip', '^0.3.0' ]
+97 verbose addNamed [ null, '>=0.3.0-0 <0.4.0-0' ]
+98 silly lockFile 21e761ba-decompress-zip-0-3-0 decompress-zip@^0.3.0
+99 verbose lock decompress-zip@^0.3.0 /home/silver/.npm/21e761ba-decompress-zip-0-3-0.lock
+100 verbose cache add [ 'request@^2.55.0', null ]
+101 verbose cache add name=undefined spec="request@^2.55.0" args=["request@^2.55.0",null]
+102 verbose parsed url { protocol: null,
+102 verbose parsed url   slashes: null,
+102 verbose parsed url   auth: null,
+102 verbose parsed url   host: null,
+102 verbose parsed url   port: null,
+102 verbose parsed url   hostname: null,
+102 verbose parsed url   hash: null,
+102 verbose parsed url   search: null,
+102 verbose parsed url   query: null,
+102 verbose parsed url   pathname: 'request@^2.55.0',
+102 verbose parsed url   path: 'request@^2.55.0',
+102 verbose parsed url   href: 'request@^2.55.0' }
+103 verbose cache add name="request" spec="^2.55.0" args=["request","^2.55.0"]
+104 verbose parsed url { protocol: null,
+104 verbose parsed url   slashes: null,
+104 verbose parsed url   auth: null,
+104 verbose parsed url   host: null,
+104 verbose parsed url   port: null,
+104 verbose parsed url   hostname: null,
+104 verbose parsed url   hash: null,
+104 verbose parsed url   search: null,
+104 verbose parsed url   query: null,
+104 verbose parsed url   pathname: '^2.55.0',
+104 verbose parsed url   path: '^2.55.0',
+104 verbose parsed url   href: '^2.55.0' }
+105 verbose addNamed [ 'request', '^2.55.0' ]
+106 verbose addNamed [ null, '>=2.55.0-0 <3.0.0-0' ]
+107 silly lockFile 54080d27-request-2-55-0 request@^2.55.0
+108 verbose lock request@^2.55.0 /home/silver/.npm/54080d27-request-2-55-0.lock
+109 verbose cache add [ 'uuid@^3.0.0', null ]
+110 verbose cache add name=undefined spec="uuid@^3.0.0" args=["uuid@^3.0.0",null]
+111 verbose parsed url { protocol: null,
+111 verbose parsed url   slashes: null,
+111 verbose parsed url   auth: null,
+111 verbose parsed url   host: null,
+111 verbose parsed url   port: null,
+111 verbose parsed url   hostname: null,
+111 verbose parsed url   hash: null,
+111 verbose parsed url   search: null,
+111 verbose parsed url   query: null,
+111 verbose parsed url   pathname: 'uuid@^3.0.0',
+111 verbose parsed url   path: 'uuid@^3.0.0',
+111 verbose parsed url   href: 'uuid@^3.0.0' }
+112 verbose cache add name="uuid" spec="^3.0.0" args=["uuid","^3.0.0"]
+113 verbose parsed url { protocol: null,
+113 verbose parsed url   slashes: null,
+113 verbose parsed url   auth: null,
+113 verbose parsed url   host: null,
+113 verbose parsed url   port: null,
+113 verbose parsed url   hostname: null,
+113 verbose parsed url   hash: null,
+113 verbose parsed url   search: null,
+113 verbose parsed url   query: null,
+113 verbose parsed url   pathname: '^3.0.0',
+113 verbose parsed url   path: '^3.0.0',
+113 verbose parsed url   href: '^3.0.0' }
+114 verbose addNamed [ 'uuid', '^3.0.0' ]
+115 verbose addNamed [ null, '>=3.0.0-0 <4.0.0-0' ]
+116 silly lockFile 0b2cf33d-uuid-3-0-0 uuid@^3.0.0
+117 verbose lock uuid@^3.0.0 /home/silver/.npm/0b2cf33d-uuid-3-0-0.lock
+118 silly addNameRange { name: 'async', range: '>=2.3.0-0 <3.0.0-0', hasData: false }
+119 silly addNameRange { name: 'lock', range: '>=0.1.2-0 <0.2.0-0', hasData: false }
+120 silly addNameRange { name: 'decompress-zip',
+120 silly addNameRange   range: '>=0.3.0-0 <0.4.0-0',
+120 silly addNameRange   hasData: false }
+121 silly addNameRange { name: 'request', range: '>=2.55.0-0 <3.0.0-0', hasData: false }
+122 silly addNameRange { name: 'uuid', range: '>=3.0.0-0 <4.0.0-0', hasData: false }
+123 verbose url raw lock
+124 verbose url resolving [ 'https://registry.npmjs.org/', './lock' ]
+125 verbose url resolved https://registry.npmjs.org/lock
+126 info trying registry request attempt 1 at 17:19:54
+127 verbose etag "59676ae4-28c7"
+128 http GET https://registry.npmjs.org/lock
+129 verbose url raw decompress-zip
+130 verbose url resolving [ 'https://registry.npmjs.org/', './decompress-zip' ]
+131 verbose url resolved https://registry.npmjs.org/decompress-zip
+132 info trying registry request attempt 1 at 17:19:54
+133 verbose etag "5928b7bb-5740"
+134 http GET https://registry.npmjs.org/decompress-zip
+135 verbose url raw async
+136 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+137 verbose url resolved https://registry.npmjs.org/async
+138 info trying registry request attempt 1 at 17:19:54
+139 verbose etag "5966a9ac-21ba5"
+140 http GET https://registry.npmjs.org/async
+141 verbose url raw uuid
+142 verbose url resolving [ 'https://registry.npmjs.org/', './uuid' ]
+143 verbose url resolved https://registry.npmjs.org/uuid
+144 info trying registry request attempt 1 at 17:19:54
+145 verbose etag "5960e577-678d"
+146 http GET https://registry.npmjs.org/uuid
+147 verbose url raw request
+148 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+149 verbose url resolved https://registry.npmjs.org/request
+150 info trying registry request attempt 1 at 17:19:54
+151 verbose etag "59688e6e-3787a"
+152 http GET https://registry.npmjs.org/request
+153 http 304 https://registry.npmjs.org/decompress-zip
+154 silly registry.get cb [ 304,
+154 silly registry.get   { date: 'Fri, 14 Jul 2017 11:49:54 GMT',
+154 silly registry.get     via: '1.1 varnish',
+154 silly registry.get     'cache-control': 'max-age=300',
+154 silly registry.get     etag: '"5928b7bb-5740"',
+154 silly registry.get     age: '12',
+154 silly registry.get     connection: 'keep-alive',
+154 silly registry.get     'x-served-by': 'cache-sin18026-SIN',
+154 silly registry.get     'x-cache': 'HIT',
+154 silly registry.get     'x-cache-hits': '1',
+154 silly registry.get     'x-timer': 'S1500032995.579792,VS0,VE0',
+154 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+155 verbose etag decompress-zip from cache
+156 http 304 https://registry.npmjs.org/request
+157 silly registry.get cb [ 304,
+157 silly registry.get   { date: 'Fri, 14 Jul 2017 11:49:54 GMT',
+157 silly registry.get     via: '1.1 varnish',
+157 silly registry.get     'cache-control': 'max-age=300',
+157 silly registry.get     etag: '"59688e6e-3787a"',
+157 silly registry.get     age: '290',
+157 silly registry.get     connection: 'keep-alive',
+157 silly registry.get     'x-served-by': 'cache-sin18035-SIN',
+157 silly registry.get     'x-cache': 'HIT',
+157 silly registry.get     'x-cache-hits': '1',
+157 silly registry.get     'x-timer': 'S1500032995.583590,VS0,VE1',
+157 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+158 verbose etag request from cache
+159 silly addNameRange number 2 { name: 'decompress-zip',
+159 silly addNameRange   range: '>=0.3.0-0 <0.4.0-0',
+159 silly addNameRange   hasData: true }
+160 silly addNameRange versions [ 'decompress-zip',
+160 silly addNameRange   [ '0.0.1',
+160 silly addNameRange     '0.0.2',
+160 silly addNameRange     '0.0.3',
+160 silly addNameRange     '0.0.4',
+160 silly addNameRange     '0.0.5',
+160 silly addNameRange     '0.0.6',
+160 silly addNameRange     '0.0.7',
+160 silly addNameRange     '0.0.8',
+160 silly addNameRange     '0.1.0',
+160 silly addNameRange     '0.2.0',
+160 silly addNameRange     '0.2.1',
+160 silly addNameRange     '0.3.0' ] ]
+161 verbose addNamed [ 'decompress-zip', '0.3.0' ]
+162 verbose addNamed [ '0.3.0', '0.3.0' ]
+163 silly lockFile 127a295a-decompress-zip-0-3-0 decompress-zip@0.3.0
+164 verbose lock decompress-zip@0.3.0 /home/silver/.npm/127a295a-decompress-zip-0-3-0.lock
+165 silly addNameRange number 2 { name: 'request', range: '>=2.55.0-0 <3.0.0-0', hasData: true }
+166 silly addNameRange versions [ 'request',
+166 silly addNameRange   [ '0.10.0',
+166 silly addNameRange     '0.8.3',
+166 silly addNameRange     '0.9.0',
+166 silly addNameRange     '0.9.1',
+166 silly addNameRange     '0.9.5',
+166 silly addNameRange     '1.0.0',
+166 silly addNameRange     '1.1.0',
+166 silly addNameRange     '1.1.1',
+166 silly addNameRange     '1.2.0',
+166 silly addNameRange     '1.9.0',
+166 silly addNameRange     '1.9.1',
+166 silly addNameRange     '1.9.2',
+166 silly addNameRange     '1.9.3',
+166 silly addNameRange     '1.9.5',
+166 silly addNameRange     '1.9.7',
+166 silly addNameRange     '1.9.8',
+166 silly addNameRange     '1.9.9',
+166 silly addNameRange     '2.0.0',
+166 silly addNameRange     '2.0.1',
+166 silly addNameRange     '2.0.2',
+166 silly addNameRange     '2.0.3',
+166 silly addNameRange     '2.0.4',
+166 silly addNameRange     '2.0.5',
+166 silly addNameRange     '2.1.0',
+166 silly addNameRange     '2.1.1',
+166 silly addNameRange     '2.2.0',
+166 silly addNameRange     '2.2.5',
+166 silly addNameRange     '2.2.6',
+166 silly addNameRange     '2.2.9',
+166 silly addNameRange     '2.9.0',
+166 silly addNameRange     '2.9.1',
+166 silly addNameRange     '2.9.2',
+166 silly addNameRange     '2.9.3',
+166 silly addNameRange     '2.9.100',
+166 silly addNameRange     '2.9.150',
+166 silly addNameRange     '2.9.151',
+166 silly addNameRange     '2.9.152',
+166 silly addNameRange     '2.9.153',
+166 silly addNameRange     '2.9.200',
+166 silly addNameRange     '2.9.201',
+166 silly addNameRange     '2.9.202',
+166 silly addNameRange     '2.9.203',
+166 silly addNameRange     '2.10.0',
+166 silly addNameRange     '2.11.0',
+166 silly addNameRange     '2.11.1',
+166 silly addNameRange     '2.11.2',
+166 silly addNameRange     '2.11.3',
+166 silly addNameRange     '2.11.4',
+166 silly addNameRange     '2.12.0',
+166 silly addNameRange     '2.14.0',
+166 silly addNameRange     '2.16.0',
+166 silly addNameRange     '2.16.2',
+166 silly addNameRange     '2.16.4',
+166 silly addNameRange     '2.16.6',
+166 silly addNameRange     '2.18.0',
+166 silly addNameRange     '2.19.0',
+166 silly addNameRange     '2.20.0',
+166 silly addNameRange     '2.21.0',
+166 silly addNameRange     '2.22.0',
+166 silly addNameRange     '2.23.0',
+166 silly addNameRange     '2.24.0',
+166 silly addNameRange     '2.25.0',
+166 silly addNameRange     '2.26.0',
+166 silly addNameRange     '2.27.0',
+166 silly addNameRange     '2.28.0',
+166 silly addNameRange     '2.29.0',
+166 silly addNameRange     '2.30.0',
+166 silly addNameRange     '2.31.0',
+166 silly addNameRange     '2.32.0',
+166 silly addNameRange     '2.33.0',
+166 silly addNameRange     '2.34.0',
+166 silly addNameRange     '2.35.0',
+166 silly addNameRange     '2.36.0',
+166 silly addNameRange     '2.37.0',
+166 silly addNameRange     '2.38.0',
+166 silly addNameRange     '2.39.0',
+166 silly addNameRange     '2.40.0',
+166 silly addNameRange     '2.41.0',
+166 silly addNameRange     '2.42.0',
+166 silly addNameRange     '2.43.0',
+166 silly addNameRange     '2.44.0',
+166 silly addNameRange     '2.45.0',
+166 silly addNameRange     '2.46.0',
+166 silly addNameRange     '2.47.0',
+166 silly addNameRange     '2.48.0',
+166 silly addNameRange     '2.49.0',
+166 silly addNameRange     '2.50.0',
+166 silly addNameRange     '2.51.0',
+166 silly addNameRange     '2.52.0',
+166 silly addNameRange     '2.53.0',
+166 silly addNameRange     '2.54.0',
+166 silly addNameRange     '2.55.0',
+166 silly addNameRange     '2.56.0',
+166 silly addNameRange     '2.57.0',
+166 silly addNameRange     '2.58.0',
+166 silly addNameRange     '2.59.0',
+166 silly addNameRange     '2.60.0',
+166 silly addNameRange     '2.61.0',
+166 silly addNameRange     '2.62.0',
+166 silly addNameRange     '2.63.0',
+166 silly addNameRange     '2.64.0',
+166 silly addNameRange     '2.65.0',
+166 silly addNameRange     '2.66.0',
+166 silly addNameRange     '2.67.0',
+166 silly addNameRange     '2.68.0',
+166 silly addNameRange     '2.69.0',
+166 silly addNameRange     '2.70.0',
+166 silly addNameRange     '2.71.0',
+166 silly addNameRange     '2.72.0',
+166 silly addNameRange     '2.73.0',
+166 silly addNameRange     '2.74.0',
+166 silly addNameRange     '2.75.0',
+166 silly addNameRange     '2.76.0',
+166 silly addNameRange     '2.77.0',
+166 silly addNameRange     '2.78.0',
+166 silly addNameRange     '2.79.0',
+166 silly addNameRange     '2.80.0',
+166 silly addNameRange     '2.81.0' ] ]
+167 verbose addNamed [ 'request', '2.81.0' ]
+168 verbose addNamed [ '2.81.0', '2.81.0' ]
+169 silly lockFile e2a1a152-request-2-81-0 request@2.81.0
+170 verbose lock request@2.81.0 /home/silver/.npm/e2a1a152-request-2-81-0.lock
+171 silly lockFile 127a295a-decompress-zip-0-3-0 decompress-zip@0.3.0
+172 silly lockFile 127a295a-decompress-zip-0-3-0 decompress-zip@0.3.0
+173 silly lockFile 21e761ba-decompress-zip-0-3-0 decompress-zip@^0.3.0
+174 silly lockFile 21e761ba-decompress-zip-0-3-0 decompress-zip@^0.3.0
+175 silly lockFile e2a1a152-request-2-81-0 request@2.81.0
+176 silly lockFile e2a1a152-request-2-81-0 request@2.81.0
+177 silly lockFile 54080d27-request-2-55-0 request@^2.55.0
+178 silly lockFile 54080d27-request-2-55-0 request@^2.55.0
+179 http 304 https://registry.npmjs.org/lock
+180 silly registry.get cb [ 304,
+180 silly registry.get   { date: 'Fri, 14 Jul 2017 11:49:54 GMT',
+180 silly registry.get     via: '1.1 varnish',
+180 silly registry.get     'cache-control': 'max-age=300',
+180 silly registry.get     etag: '"59676ae4-28c7"',
+180 silly registry.get     age: '17',
+180 silly registry.get     connection: 'keep-alive',
+180 silly registry.get     'x-served-by': 'cache-sin18033-SIN',
+180 silly registry.get     'x-cache': 'HIT',
+180 silly registry.get     'x-cache-hits': '1',
+180 silly registry.get     'x-timer': 'S1500032995.615994,VS0,VE0',
+180 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+181 verbose etag lock from cache
+182 silly addNameRange number 2 { name: 'lock', range: '>=0.1.2-0 <0.2.0-0', hasData: true }
+183 silly addNameRange versions [ 'lock',
+183 silly addNameRange   [ '0.0.0',
+183 silly addNameRange     '0.0.1',
+183 silly addNameRange     '0.0.2',
+183 silly addNameRange     '0.0.3',
+183 silly addNameRange     '0.0.4',
+183 silly addNameRange     '0.1.0',
+183 silly addNameRange     '0.1.2',
+183 silly addNameRange     '0.1.3',
+183 silly addNameRange     '0.1.4' ] ]
+184 verbose addNamed [ 'lock', '0.1.4' ]
+185 verbose addNamed [ '0.1.4', '0.1.4' ]
+186 silly lockFile 331d9705-lock-0-1-4 lock@0.1.4
+187 verbose lock lock@0.1.4 /home/silver/.npm/331d9705-lock-0-1-4.lock
+188 silly lockFile 331d9705-lock-0-1-4 lock@0.1.4
+189 silly lockFile 331d9705-lock-0-1-4 lock@0.1.4
+190 silly lockFile 3a5724e4-lock-0-1-2 lock@^0.1.2
+191 silly lockFile 3a5724e4-lock-0-1-2 lock@^0.1.2
+192 http 304 https://registry.npmjs.org/uuid
+193 silly registry.get cb [ 304,
+193 silly registry.get   { date: 'Fri, 14 Jul 2017 11:49:55 GMT',
+193 silly registry.get     via: '1.1 varnish',
+193 silly registry.get     'cache-control': 'max-age=300',
+193 silly registry.get     etag: '"5960e577-678d"',
+193 silly registry.get     age: '273',
+193 silly registry.get     connection: 'keep-alive',
+193 silly registry.get     'x-served-by': 'cache-sin18028-SIN',
+193 silly registry.get     'x-cache': 'HIT',
+193 silly registry.get     'x-cache-hits': '2',
+193 silly registry.get     'x-timer': 'S1500032995.196871,VS0,VE0',
+193 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+194 verbose etag uuid from cache
+195 silly addNameRange number 2 { name: 'uuid', range: '>=3.0.0-0 <4.0.0-0', hasData: true }
+196 silly addNameRange versions [ 'uuid',
+196 silly addNameRange   [ '0.0.1',
+196 silly addNameRange     '0.0.2',
+196 silly addNameRange     '1.4.0',
+196 silly addNameRange     '1.4.1',
+196 silly addNameRange     '1.4.2',
+196 silly addNameRange     '2.0.0',
+196 silly addNameRange     '2.0.1',
+196 silly addNameRange     '2.0.2',
+196 silly addNameRange     '2.0.3',
+196 silly addNameRange     '3.0.0',
+196 silly addNameRange     '3.0.1',
+196 silly addNameRange     '3.1.0' ] ]
+197 verbose addNamed [ 'uuid', '3.1.0' ]
+198 verbose addNamed [ '3.1.0', '3.1.0' ]
+199 silly lockFile f844a717-uuid-3-1-0 uuid@3.1.0
+200 verbose lock uuid@3.1.0 /home/silver/.npm/f844a717-uuid-3-1-0.lock
+201 silly lockFile f844a717-uuid-3-1-0 uuid@3.1.0
+202 silly lockFile f844a717-uuid-3-1-0 uuid@3.1.0
+203 silly lockFile 0b2cf33d-uuid-3-0-0 uuid@^3.0.0
+204 silly lockFile 0b2cf33d-uuid-3-0-0 uuid@^3.0.0
+205 http 304 https://registry.npmjs.org/async
+206 silly registry.get cb [ 304,
+206 silly registry.get   { date: 'Fri, 14 Jul 2017 11:50:04 GMT',
+206 silly registry.get     via: '1.1 varnish',
+206 silly registry.get     'cache-control': 'max-age=300',
+206 silly registry.get     etag: '"5966a9ac-21ba5"',
+206 silly registry.get     age: '214',
+206 silly registry.get     connection: 'keep-alive',
+206 silly registry.get     'x-served-by': 'cache-sin18031-SIN',
+206 silly registry.get     'x-cache': 'HIT',
+206 silly registry.get     'x-cache-hits': '1',
+206 silly registry.get     'x-timer': 'S1500033005.846051,VS0,VE1',
+206 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+207 verbose etag async from cache
+208 silly addNameRange number 2 { name: 'async', range: '>=2.3.0-0 <3.0.0-0', hasData: true }
+209 silly addNameRange versions [ 'async',
+209 silly addNameRange   [ '0.1.0',
+209 silly addNameRange     '0.1.1',
+209 silly addNameRange     '0.1.2',
+209 silly addNameRange     '0.1.3',
+209 silly addNameRange     '0.1.4',
+209 silly addNameRange     '0.1.5',
+209 silly addNameRange     '0.1.6',
+209 silly addNameRange     '0.1.7',
+209 silly addNameRange     '0.1.8',
+209 silly addNameRange     '0.1.9',
+209 silly addNameRange     '0.1.10',
+209 silly addNameRange     '0.1.11',
+209 silly addNameRange     '0.1.12',
+209 silly addNameRange     '0.1.13',
+209 silly addNameRange     '0.1.14',
+209 silly addNameRange     '0.1.15',
+209 silly addNameRange     '0.1.16',
+209 silly addNameRange     '0.1.17',
+209 silly addNameRange     '0.1.18',
+209 silly addNameRange     '0.1.19',
+209 silly addNameRange     '0.1.20',
+209 silly addNameRange     '0.1.21',
+209 silly addNameRange     '0.1.22',
+209 silly addNameRange     '0.2.0',
+209 silly addNameRange     '0.2.1',
+209 silly addNameRange     '0.2.2',
+209 silly addNameRange     '0.2.3',
+209 silly addNameRange     '0.2.4',
+209 silly addNameRange     '0.2.5',
+209 silly addNameRange     '0.2.6',
+209 silly addNameRange     '0.2.7',
+209 silly addNameRange     '0.2.8',
+209 silly addNameRange     '0.2.9',
+209 silly addNameRange     '0.2.10',
+209 silly addNameRange     '0.3.0',
+209 silly addNameRange     '0.4.0',
+209 silly addNameRange     '0.4.1',
+209 silly addNameRange     '0.5.0',
+209 silly addNameRange     '0.6.0',
+209 silly addNameRange     '0.6.1',
+209 silly addNameRange     '0.6.2',
+209 silly addNameRange     '0.7.0',
+209 silly addNameRange     '0.8.0',
+209 silly addNameRange     '0.9.0',
+209 silly addNameRange     '0.9.2',
+209 silly addNameRange     '1.0.0',
+209 silly addNameRange     '1.1.0',
+209 silly addNameRange     '1.2.0',
+209 silly addNameRange     '1.1.1',
+209 silly addNameRange     '1.2.1',
+209 silly addNameRange     '1.3.0',
+209 silly addNameRange     '1.4.0',
+209 silly addNameRange     '1.4.1',
+209 silly addNameRange     '1.4.2',
+209 silly addNameRange     '1.5.0',
+209 silly addNameRange     '1.5.1',
+209 silly addNameRange     '1.5.2',
+209 silly addNameRange     '2.0.0-alpha.0',
+209 silly addNameRange     '2.0.0-rc.1',
+209 silly addNameRange     '2.0.0-rc.2',
+209 silly addNameRange     '2.0.0-rc.3',
+209 silly addNameRange     '2.0.0-rc.4',
+209 silly addNameRange     '2.0.0-rc.5',
+209 silly addNameRange     '2.0.0-rc.6',
+209 silly addNameRange     '2.0.0',
+209 silly addNameRange     '2.0.1',
+209 silly addNameRange     '2.1.0',
+209 silly addNameRange     '2.1.1',
+209 silly addNameRange     '2.1.2',
+209 silly addNameRange     '2.1.4',
+209 silly addNameRange     '2.1.5',
+209 silly addNameRange     '2.2.0',
+209 silly addNameRange     '2.3.0',
+209 silly addNameRange     '2.4.0',
+209 silly addNameRange     '2.4.1',
+209 silly addNameRange     '2.5.0' ] ]
+210 verbose addNamed [ 'async', '2.5.0' ]
+211 verbose addNamed [ '2.5.0', '2.5.0' ]
+212 silly lockFile a40b9946-async-2-5-0 async@2.5.0
+213 verbose lock async@2.5.0 /home/silver/.npm/a40b9946-async-2-5-0.lock
+214 silly lockFile a40b9946-async-2-5-0 async@2.5.0
+215 silly lockFile a40b9946-async-2-5-0 async@2.5.0
+216 silly lockFile fa9ef8fe-async-2-3-0 async@^2.3.0
+217 silly lockFile fa9ef8fe-async-2-3-0 async@^2.3.0
+218 silly addNameRange { name: 'types/node',
+218 silly addNameRange   range: '>=7.0.31-0 <8.0.0-0',
+218 silly addNameRange   hasData: false }
+219 verbose url raw types/node
+220 verbose url resolving [ 'https://registry.npmjs.org/', './types/node' ]
+221 verbose url resolved https://registry.npmjs.org/types/node
+222 info trying registry request attempt 1 at 17:20:37
+223 http GET https://registry.npmjs.org/types/node
+224 http 404 https://registry.npmjs.org/types/node
+225 silly registry.get cb [ 404,
+225 silly registry.get   { 'content-type': 'application/json',
+225 silly registry.get     'cache-control': 'max-age=0',
+225 silly registry.get     'content-length': '2',
+225 silly registry.get     'accept-ranges': 'bytes',
+225 silly registry.get     date: 'Fri, 14 Jul 2017 11:50:37 GMT',
+225 silly registry.get     via: '1.1 varnish',
+225 silly registry.get     connection: 'keep-alive',
+225 silly registry.get     'x-served-by': 'cache-sin18020-SIN',
+225 silly registry.get     'x-cache': 'MISS',
+225 silly registry.get     'x-cache-hits': '0',
+225 silly registry.get     'x-timer': 'S1500033038.564571,VS0,VE245',
+225 silly registry.get     vary: 'Accept-Encoding' } ]
+226 silly addNameRange number 2 { name: 'types/node',
+226 silly addNameRange   range: '>=7.0.31-0 <8.0.0-0',
+226 silly addNameRange   hasData: true }
+227 silly addNameRange versions [ undefined, [] ]
+228 error TypeError: Cannot read property 'latest' of undefined
+228 error     at next (/usr/share/npm/lib/cache.js:687:35)
+228 error     at /usr/share/npm/lib/cache.js:675:5
+228 error     at saved (/usr/share/npm/node_modules/npm-registry-client/lib/get.js:142:7)
+228 error     at /usr/lib/nodejs/graceful-fs/polyfills.js:133:7
+228 error     at Object.oncomplete (fs.js:107:15)
+229 error If you need help, you may report this log at:
+229 error     <http://github.com/isaacs/npm/issues>
+229 error or email it to:
+229 error     <npm-@googlegroups.com>
+230 error System Linux 4.4.0-31-generic
+231 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "ngrok"
+232 error cwd /home/silver/practice/omni_app
+233 error node -v v0.10.25
+234 error npm -v 1.3.10
+235 error type non_object_property_load
+236 verbose exit [ 1, true ]

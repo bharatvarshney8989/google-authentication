@@ -2,9 +2,14 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
-
+gem 'byebug'
+gem 'json'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+gem 'omniauth-github'
+gem 'omniauth-google-oauth2', git: 'https://github.com/zquestz/omniauth-google-oauth2.git'
+gem 'google-api-client', '~> 0.9', require: 'google/apis/gmail_v1'
+gem 'httparty'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -31,9 +36,15 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+group :development, :test do
+  gem 'sqlite3'
+end
 
-gem 'omniauth-github'
-gem 'omniauth-google-oauth2', github: 'zquestz/omniauth-google-oauth2', branch: 'v0.2.10'
+group :production do
+  gem 'pg', '0.20.0'
+  gem 'rails_12factor'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

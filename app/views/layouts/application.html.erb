@@ -32,6 +32,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
+             <li><%=link_to "practice",'practice', method: :create%></li>
              <% if current_user %>
                 <li>signed in as:<%= current_user.name%> - <%=image_tag(@auth['info']['image'], width: '50', height: '50', class: 'img-circle')%></li>
                 <li><%=link_to "Sign Out",'sign_out', method: :delete%></li>

@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
 
       def self.sign_in_from_omniauth(auth)
-         find_by(provider: auth['provider'], uid: auth['uid']) || create_user_form_omniauth(auth)
+         find_by(provider: auth['provider'], uid: auth['uid']) || create_user_form_omniaut(auth)
       end
 
       def self.create_user_form_omniauth(auth)
+
         create(
             provider: auth['provider'],
             uid:      auth['uid'],
@@ -13,7 +14,6 @@ class User < ActiveRecord::Base
       end
 
       def self.from_omniauth(auth)
-          byebug
           where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
           user.provider = auth.provider
           user.uid     = auth.uid
