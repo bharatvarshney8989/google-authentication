@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OmniApp</title>
+  <title>Gmail MAIL API</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-           <h1><%= link_to root_path do%>omni<%end%></h1>
+           <h1><%= link_to root_path do%>GMAIL MAIL AUTHENTICATION<%end%></h1>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,9 +55,38 @@
      </div>
      <% end %>
 
-
-
+  <table class="table">
+ <thead class="thead-inverse">
+   <tr>
+     <th>#</th>
+     <th>MESSAGE ID</th>
+     <th>FROM</th>
+     <th>SUBJECT</th>
+   </tr>
+ </thead>
+ <tbody>
+   <tr>
+     <th scope="row">1</th>
+     <td>Mark</td>
+     <td>Otto</td>
+     <td>@mdo</td>
+   </tr>
+   <tr>
+     <th scope="row">2</th>
+     <td>Jacob</td>
+     <td>Thornton</td>
+     <td>@fat</td>
+   </tr>
+   <tr>
+     <th scope="row">3</th>
+     <td>Larry</td>
+     <td>the Bird</td>
+     <td>@twitter</td>
+   </tr>
+ </tbody>
+</table>
   <%=yield%>
+
 
 </body>
 </html>
