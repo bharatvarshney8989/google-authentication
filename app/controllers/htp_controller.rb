@@ -51,8 +51,5 @@ class HtpController < ApplicationController
 
 
 
-
-
-
       end
 end

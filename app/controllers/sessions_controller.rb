@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
    def create
      byebug
       auth = request.env["omniauth.auth"]
+      email = auth.info.email
       session[:omniauth] = auth.except('extra')
       user = User.from_omniauth(auth)
       session[:user_id] = user.id
@@ -18,6 +19,8 @@ class SessionsController < ApplicationController
       imap.authenticate('XOAUTH2', 'rajat.kumar@untroddenlabs.com', user.oauth_token)
       xmessages_count = imap.status('INBOX', ['MESSAGES'])['MESSAGES']
        puts xmessages_count
+       search_result = imap.search(["OR", "FROM", "prem.saha@untroddenlabs.com", "TO", "navpreet@untroddenlabs.com"])
+
        imap.select("[Gmail]/All Mail")
        all_mail_id = imap.search(["ALL"])
        s1 = []
@@ -43,6 +46,8 @@ class SessionsController < ApplicationController
        fetch_thread = Thread.start { imap.fetch(1..23, "UID") }
        search_result = imap.search(["FROM", "hello"])
        fetch_result = fetch_thread.value
+       mail_count = imap.search(["SINCE", @since_date])
+        puts "\n  Total Emails Since" + @since_date + mail_count.count.to_s
        #imap.examine('INBOX')
       redirect_to root_url, notice: "SIGNED IN"
    end
