@@ -54,7 +54,7 @@ require 'fileutils'
           envelope = {}
           count = 0,i=0
           tmp = []
-          byebug
+          
           while(message_id.count > count)
                   tmp[i]=@imap.fetch(message_id[count], 'BODY[HEADER.FIELDS (SUBJECT)]').to_s.split("{").second.chop
                   tmp[i+=1]=@imap.fetch(message_id[count], 'BODY[HEADER.FIELDS (FROM)]').to_s.split("{").second.chop

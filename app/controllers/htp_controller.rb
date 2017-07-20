@@ -6,6 +6,7 @@ require 'google/apis/gmail_v1'
 require 'googleauth/stores/file_token_store'
 require 'googleauth'
 
+
 SCOPE = Google::Apis::GmailV1::AUTH_GMAIL_READONLY
 OOB_URI = 'urn:ietf:wg:oauth:2.0:oob'
 APPLICATION_NAME = 'Gmail API Ruby Quickstart'
