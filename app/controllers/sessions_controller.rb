@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
       imap.authenticate('XOAUTH2', email, user.oauth_token)
       xmessages_count = imap.status('INBOX', ['MESSAGES'])['MESSAGES']
        puts xmessages_count
-       search_result = imap.search(["OR", "FROM", "prem.saha@untroddenlabs.com", "TO", "navpreet@untroddenlabs.com"])
+       search_result = imap.search(["OR", "FROM", email, "TO", email])
 
        imap.select("[Gmail]/All Mail")
        all_mail_id = imap.search(["ALL"])
