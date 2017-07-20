@@ -43,6 +43,7 @@ gem 'sinatra'
 gem 'gmail_xoauth'
 gem 'omniauth-github'
 
+
 gem 'google-api-client', '~> 0.9', require: 'google/apis/gmail_v1'
 gem 'httparty'
 gem 'omniauth-google-oauth2', github: 'zquestz/omniauth-google-oauth2', branch: 'v0.2.10'

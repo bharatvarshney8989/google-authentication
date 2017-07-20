@@ -4,7 +4,6 @@ require 'google/apis/gmail_v1'
 require 'googleauth'
 require 'googleauth/stores/file_token_store'
 require 'mail'
-require 'monitor'
 require 'fileutils'
 
    class GmailAccess
@@ -16,12 +15,6 @@ require 'fileutils'
           rescue Exception => e
             return "Error in Auth Token or email: #{e}"
          end
-       end
-       def capability
-            synchronize do
-            send_command("CAPABILITY")
-            return @responses.delete("CAPABILITY")[-1]
-          end
        end
 
        def display_message_id
@@ -35,10 +28,14 @@ require 'fileutils'
           xmessages_count
       end
 
-      def search(text, type='body')
+      def search(text, type='body',mailbox='all')
           message_id = []
           byebug
           hash = {subject: 'SUBJECT', to: 'TO', from: 'FROM', cc: 'CC' , body: 'BODY'}
+          mail_box = { inbox: 'INBOX', all: '[Gmail]/All Mail', draft: '[Gmail]/Drafts',
+                       important:'[Gmail]/Important', sent: '[Gmail]/Sent Mail',
+                       spam: '[Gmail]/Spam',trash: '[Gmail]/Trash', starred: '[Gmail]/Starred' }
+                      @imap.select(mail_box[mailbox.downcase.to_sym])
           message_id = @imap.search([hash[type.downcase.to_sym], text, "NOT", "NEW" ])
           message_id
       end
@@ -50,21 +47,24 @@ require 'fileutils'
         @imap.disconnect
         return("Successfully disconnect!!")
       end
-      def message_body( message_id = [])
+
+      def message_body( message_ids = [])
           envelope = {}
-          count = 0,i=0
-          tmp = []
-          
-          while(message_id.count > count)
-                  tmp[i]=@imap.fetch(message_id[count], 'BODY[HEADER.FIELDS (SUBJECT)]').to_s.split("{").second.chop
-                  tmp[i+=1]=@imap.fetch(message_id[count], 'BODY[HEADER.FIELDS (FROM)]').to_s.split("{").second.chop
-                  tmp[i+=1]=@imap.fetch(message_id[count], 'BODY[HEADER.FIELDS (to)]').to_s.split("{").second.chop
-                  tmp[i+=1]=@imap.fetch(message_id[count], 'BODY[HEADER.FIELDS (BCC)]').to_s.split("{").second.chop
-                  tmp[i+=1]=@imap.fetch(message_id[count], 'BODY[HEADER.FIELDS (CC)]').to_s.split("{").second.chop
-                  tmp[i+=1]=@imap.fetch(message_id[count], 'BODY[HEADER.FIELDS (BODY)]').to_s.split("{").second.chop
-                  envelope[message_id] = tmp
-                  tmp.clear
+          i = 0
+          count = 0
+          byebug
+          while(message_ids.count > count)
+                  tmp = []
+                  tmp[i=0]=@imap.fetch(message_ids[count], 'BODY[HEADER.FIELDS (SUBJECT)]').to_s.split("{").second.chop
+                  tmp[i+=1]=@imap.fetch(message_ids[count], 'BODY[HEADER.FIELDS (FROM)]').to_s.split("{").second.chop
+                  tmp[i+=1]=@imap.fetch(message_ids[count], 'BODY[HEADER.FIELDS (to)]').to_s.split("{").second.chop
+                  tmp[i+=1]=@imap.fetch(message_ids[count], 'BODY[HEADER.FIELDS (BCC)]').to_s.split("{").second.chop
+                  tmp[i+=1]=@imap.fetch(message_ids[count], 'BODY[HEADER.FIELDS (CC)]').to_s.split("{").second.chop
+                  tmp[i+=1]=@imap.fetch(message_ids[count], 'BODY[HEADER.FIELDS (BODY)]').to_s.split("{").second.chop
+                  byebug
+                  envelope[message_ids[count]] = tmp
                  count += 1
           end
+          envelope
       end
    end
