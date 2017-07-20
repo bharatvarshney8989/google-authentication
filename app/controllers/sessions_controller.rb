@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
       session[:user_auth_token] = user.oauth_token
       imap = Net::IMAP.new('imap.googlemail.com', 993, usessl = true, certs = nil, verify = false)
       byebug
-      imap.authenticate('XOAUTH2', 'rajat.kumar@untroddenlabs.com', user.oauth_token)
+      imap.authenticate('XOAUTH2', email, user.oauth_token)
       xmessages_count = imap.status('INBOX', ['MESSAGES'])['MESSAGES']
        puts xmessages_count
        search_result = imap.search(["OR", "FROM", "prem.saha@untroddenlabs.com", "TO", "navpreet@untroddenlabs.com"])
