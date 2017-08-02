@@ -32,19 +32,19 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'google-api-client'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
 gem 'gmail'
 gem 'mail'
 gem 'ruby-gmail'
 gem 'sinatra'
 gem 'gmail_xoauth'
 gem 'omniauth-github'
-
-
-gem 'google-api-client', '~> 0.9', require: 'google/apis/gmail_v1'
+gem 'googleauth'
 gem 'httparty'
 gem 'omniauth-google-oauth2', github: 'zquestz/omniauth-google-oauth2', branch: 'v0.2.10'
 

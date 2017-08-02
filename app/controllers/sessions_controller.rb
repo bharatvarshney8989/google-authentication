@@ -1,7 +1,7 @@
 require 'gmail_xoauth'
 require 'gmail'
 require 'google/apis/gmail_v1'
-require 'googleauth'
+#require 'googleauth'
 require 'googleauth/stores/file_token_store'
 require 'mail'
 require 'fileutils'
@@ -19,9 +19,11 @@ class SessionsController < ApplicationController
       imap.authenticate('XOAUTH2', 'rajat.kumar@untroddenlabs.com', user.oauth_token)
       xmessages_count = imap.status('INBOX', ['MESSAGES'])['MESSAGES']
        puts xmessages_count
-       search_result = imap.search(["OR", "FROM", "prem.saha@untroddenlabs.com", "TO", "navpreet@untroddenlabs.com"])
+       #search_result = imap.search(["OR", "FROM", "prem.saha@untroddenlabs.com", "TO", "navpreet@untroddenlabs.com"])
 
        imap.select("[Gmail]/All Mail")
+       byebug
+       fetch_thread = Thread.start { imap.fetch(1..-23, "UID") }
        all_mail_id = imap.search(["ALL"])
        s1 = []
        s1[0]="SUBJECT"
